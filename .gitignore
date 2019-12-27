@@ -3,3 +3,6 @@
 
 # Ignore Jupyter notebook local files
 .ipynb_checkpoints
+
+# GCP creditials 
+credential/*
