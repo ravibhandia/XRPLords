@@ -1,5 +1,23 @@
 from sspipe import p, px
 
+## Load all python dependencies 
+
+def load_dependencies():
+    import numpy as np
+    import pandas as pd
+    import matplotlib.pyplot as plt
+    import seaborn as sns; sns.set()
+    from sklearn import preprocessing
+    #from scipy.stats import shapiro
+    from scipy.cluster.hierarchy import dendrogram, linkage 
+    from scipy.cluster.hierarchy import fcluster
+    from sklearn.cluster import AgglomerativeClustering
+    from sklearn.decomposition import PCA
+    from sklearn.cluster import KMeans
+    from sklearn import metrics
+    from scipy.spatial.distance import cdist
+    return ["Dependencies have been loaded"]
+
 def ts_to_strings(ts):
     """
     Returns a list of strings from XRP timestamps.
