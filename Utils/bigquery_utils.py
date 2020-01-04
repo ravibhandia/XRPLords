@@ -22,7 +22,7 @@ def get_gcp_creds(key_path):
         credentials = None;
     return credentials;
 
-def gpq_query(sql_query, cred, query_params = None):
+def gbq_query(sql_query, cred, query_params = None):
     """
     Run a query against BigQuery, returning Pandas dataframe
     
@@ -38,6 +38,7 @@ def gpq_query(sql_query, cred, query_params = None):
     try:
         client = bigquery.Client(credentials = cred)
         job_config = bigquery.QueryJobConfig()
+        job_config.query_parameters = query_params
         pd_query_result = client.query(sql_query, job_config = job_config).to_dataframe()
     except:
         pd_query_result = None;
