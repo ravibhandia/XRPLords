@@ -4,5 +4,8 @@
 # Ignore Jupyter notebook local files
 .ipynb_checkpoints
 
+#ReallyBig DataFiles
+Data/12_1_2019_to_12_30_2019_DownselectALL.csv
+
 # GCP creditials 
 credential/*
